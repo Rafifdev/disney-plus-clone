@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import ContentCard from "../../components/ContentCard";
 import styles from "./index.module.css"
 
-function SearchMovie(data) {
+function SearchMovie(data: any) {
     const navigate = useNavigate();
   return (
     <div>

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import ContentCard from "../../components/ContentCard";
 import styles from "./index.module.css"
 
-function Trending(data) {
+function Trending(data: any) {
     const navigate = useNavigate();
   return (
     <div style={{ marginBottom: "50px" }}>

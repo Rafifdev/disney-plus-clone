@@ -1,5 +1,5 @@
 import styles from "./index.module.css";
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import useFetch from "../../hooks/useFetch";
 import { API_KEY } from "../../constatnts";
 import useDebounce from "../../hooks/useDebounce";
@@ -23,9 +23,9 @@ function Search() {
   );
 
   const isLoading = movieLoading || tvloading;
-  const handleChage = (e) => setSearch(e.target.value);
+  const handleChage = (e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value);
 
-  // Function RenderSearch
+  // Function RenderSearch  
   const renderSearch = () => {
     if (isLoading) {
       return (
