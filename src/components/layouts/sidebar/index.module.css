@@ -96,3 +96,17 @@
   font-variation-settings:
     'FILL' 1;
 }
+
+.link {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}

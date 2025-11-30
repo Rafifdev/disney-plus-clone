@@ -1,6 +1,9 @@
 import {
   createUserWithEmailAndPassword,
   getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  updateProfile,
   type User,
 } from "firebase/auth";
 import { useState } from "react";
@@ -15,13 +18,22 @@ const useAuth = (params: Params = {}) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const createUser = async (email: string, password: string) => {
+  const createUser = async (email: string, password: string, name: string) => {
     const auth = getAuth();
 
     try {
       setError("");
       setLoading(true);
-      const response = await createUserWithEmailAndPassword(auth, email, password);
+      const response = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      if (auth.currentUser) {
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        });
+      }
       setLoading(false);
       if (typeof onSuccess === "function") {
         onSuccess(response.user);
@@ -37,14 +49,42 @@ const useAuth = (params: Params = {}) => {
     setLoading(false);
   };
 
-  // const login = (email: string, password: string) => {};
+  const login = async (email: string, password: string) => {
+    const auth = getAuth();
+    try {
+      setLoading(true);
+      setError("");
+      const response = await signInWithEmailAndPassword(auth, email, password);
+      setLoading(false);
+      if (typeof onSuccess === "function") {
+        onSuccess(response.user);
+      }
+    } catch (error: any) {
+      setError(error.message);
+      setLoading(false);
+      if (typeof onError === "function") {
+        onError(error.message);
+      }
+    }
+  };
 
-  // const logout = (email: string, password: string) => {};
+  const logout = async () => {
+    const auth = getAuth();
+    try {
+      setLoading(true);
+      setError("");
+      await signOut(auth);
+      setLoading(false);
+    } catch (error: any) {
+      setError(error.message);
+      setLoading(false);
+    }
+  };
 
   return {
     createUser,
-    // login,
-    // logout,
+    login,
+    logout,
     loading,
     error,
   };

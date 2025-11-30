@@ -40,3 +40,14 @@
 .formWrapper>button:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
+
+.errorText {
+  color: red;
+}
+
+.signupText {
+  margin-top: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}

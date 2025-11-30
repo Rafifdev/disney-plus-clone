@@ -23,7 +23,7 @@ function Home() {
   const { genres } = useGenres();
   const genreNames = useMapGenreidToName(firstContent.genre_ids, genres);
 
-  const sectionTitle = auth ? `Hi, ${auth.email}, Recomended for you` : "Recomended for you";
+  const sectionTitle = auth ? `Hi, ${auth.displayName}, Recomended for you` : "Recomended for you";
   return (
     <div>
       <ImageBanner
