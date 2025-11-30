@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.topMask {
+  height: 60vw;
+  background: linear-gradient(180deg,
+      rgba(15, 16, 20, 0) 73.08%,
+      rgba(15, 16, 20, 0.01) 77.84%,
+      rgba(15, 16, 20, 0.05) 79.74%,
+      #0f1014),
+    linear-gradient(90deg,
+      rgba(15, 16, 20, 0.8) 7.31%,
+      rgba(15, 16, 20, 0.52) 15.54%,
+      rgba(15, 16, 20, 0.12) 29.73%,
+      rgba(15, 16, 20, 0) 40.59%,
+      #0f1014);
+}
+
+.bottomMask {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  padding-left: 112px;
+  padding-bottom: 80px;
+  background-color: rgb(15, 16, 20);
+}

@@ -1,0 +1,42 @@
+.container {
+  height: 150px;
+  margin: 16px 0;
+  display: flex;
+  padding: 8px 0;
+}
+
+.imageWrapper {
+  height: 150px;
+  flex-shrink: 0;
+  background-color: gray;
+  border-radius: 9px;
+}
+
+.imageWrapper img {
+  border-radius: 8px;
+  height: 100%;
+  color: white;
+}
+
+.detailsWrapper {
+  margin-left: 32px;
+  color: #fff;
+}
+
+.detailsWrapper > h3 {
+  margin: 6px 0 0;
+  font-size: 18px;
+}
+
+.episodeSummary {
+  font-size: 14px;
+  line-height: 25px; 
+}
+
+.episodeSummary b {
+  margin: 0 4px;
+}
+
+.desc {
+  font-size: 14px;
+}

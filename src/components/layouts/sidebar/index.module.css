@@ -1,0 +1,98 @@
+.container {
+  position: fixed;
+  height: 100vh;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  margin: unset;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  background: transparent;
+}
+
+.menuWrapper {
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: transparent;
+}
+
+.overlay {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(90.43deg,
+      rgba(15, 16, 20, 1) 20%,
+      rgba(15, 16, 20, 0) 100%);
+  left: 0;
+  top: 0;
+  transition: width 100ms linear;
+}
+
+.menuItem {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menuIcon {
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: 0.5;
+  transition: margin-left 80ms linear, font-size 50ms linear, opacity 50ms linear;
+}
+
+.menuName {
+  background: transparent;
+  opacity: 0;
+  position: absolute;
+  left: 80%;
+  font-size: 18px;
+  transition: opacity 200ms linear, left 100ms linear;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: margin-left 80ms linear, font-size 50ms linear, opacity 50ms linear;
+}
+
+.container:hover .overlay {
+  width: 240%;
+}
+
+.menuWrapper:hover .menuName {
+  opacity: 1;
+  left: 75%;
+}
+
+
+.menuItem:hover .menuName {
+  margin-left: 6px;
+  color: rgba(255, 255, 255);
+}
+
+.menuItem:hover .menuIcon {
+  opacity: 1;
+  margin-left: 6px;
+  font-size: 25px;
+  font-variation-settings:
+    'FILL' 1;
+}

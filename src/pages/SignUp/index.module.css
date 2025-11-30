@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.formWrapper>input {
+  height: 50px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  display: block;
+  outline: none;
+  border: none;
+  margin: 8px 0;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.formWrapper>button {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 8px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formWrapper>button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.errorText {
+  color: red;
+}

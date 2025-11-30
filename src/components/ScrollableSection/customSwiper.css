@@ -1,0 +1,26 @@
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 1;
+  height: 100%;
+  width: 15px;
+  color: white;
+  padding: 20px;
+  top: 22px !important;
+  position: absolute;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.swiper-button-prev:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.swiper-button-next:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.85), transparent);
+}

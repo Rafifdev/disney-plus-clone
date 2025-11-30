@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Manrope:wght@200..800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(15, 16, 20);
+}
